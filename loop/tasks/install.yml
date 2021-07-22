@@ -1,0 +1,24 @@
+- name: Install Common Softwares
+  yum:
+   name: ['vim','wget','git']
+   state: present
+  when: ansible_os_family == "RedHat"
+  ignore_errors: true
+  tags:
+  - install-appache
+
+- name: create file
+  file:
+    path: /home/ec2-user/db.sh
+    state: touch
+  ignore_errors: true
+  tags:
+  - createfile
+
+- name: copy file
+  template: 
+    src: /home/ansible/an/index.html
+    dest: /tmp
+  ignore_errors: true
+  tags:
+  - copyfile

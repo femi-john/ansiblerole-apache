@@ -1,0 +1,3 @@
+---
+# tasks file for /etc/ansible/roles/loop
+- import_tasks: install.yml
