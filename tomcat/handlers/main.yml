@@ -1,6 +1,4 @@
 ---
-# handlers file for jenkins
----
 - name: restart tomcat
   service: name=tomcat state=restarted
 

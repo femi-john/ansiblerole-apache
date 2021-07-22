@@ -4,3 +4,4 @@
   roles:
   - loop
   - apache
+  - tomcat
